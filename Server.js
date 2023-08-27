@@ -67,8 +67,17 @@ mongoose.connect(process.env.MONGO_URL, {
     console.log(err.message)
 })
 app.get("/",(req,res,next) =>{
-    res.send("HÊLLO")
-})
+    var connection = new Connection(config);  
+    connection.on('connect', function(err) {  
+        
+        // If no error, then good to proceed.
+        if(err){
+            return res.json(err);  
+        }
+        res.json("Connected");  
+        
+    });
+});
 const server = app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
 const io = socket(server, {

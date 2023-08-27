@@ -66,7 +66,9 @@ mongoose.connect(process.env.MONGO_URL, {
 }).catch((err) => {
     console.log(err.message)
 })
-
+app.get("/",(req,res,next) =>{
+    res.send("HÊLLO")
+})
 const server = app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
 
 const io = socket(server, {

@@ -11,7 +11,7 @@ const config = {
         trustServerCertificate: true,
         instancename: 'SQLEXPRESS'
     },
-    port: 1433,
+    // port: 1433,
     pool: {
         "max": 10,
         "min": 0,

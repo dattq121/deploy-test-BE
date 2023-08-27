@@ -15,7 +15,7 @@ const cloudinary = require("cloudinary").v2;
 const mongoose = require("mongoose")
 const controllerInflu = require("./src/api/Controller/Influencer/InfluencerController");
 const router = require('./src/api/Router/userRouter')
-
+var Connection = require('tedious').Connection;  
 const socket = require("socket.io")
 const app = express();
 const PORT = process.env.PORT || 4000;

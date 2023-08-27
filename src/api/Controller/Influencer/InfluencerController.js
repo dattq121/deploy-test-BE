@@ -572,7 +572,7 @@ async function getAllInfluencer(req, res, next) {
     return res.json({ JsonData: JsonData })
   } catch (err) {
     console.log(err);
-    return res.json({ message: "Lỗi ", err });
+    return res.json({ message: "Lỗi xuất tại đây ", err });
   }
 }
 

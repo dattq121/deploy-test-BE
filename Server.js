@@ -39,7 +39,7 @@ app.use(session({
         maxAge: 24 * 60 * 60 * 1000
     }
 }))
-
+app.set("trust proxy", 1);
 
 app.use(
     fileUpload(

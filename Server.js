@@ -29,8 +29,6 @@ app.use(bodyParser.urlencoded({ limit: '10mb', extended: true })); // Đặt gi�
 app.use(express.urlencoded({ extended: false }));
 app.use(flash());
 
-app.enable('trust proxy',true);
-app.use(cookieParser());
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,

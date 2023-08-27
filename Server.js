@@ -28,17 +28,17 @@ app.use(bodyParser.urlencoded({ limit: '10mb', extended: true })); // Đặt gi�
 
 app.use(express.urlencoded({ extended: false }));
 app.use(flash());
-app.use(session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-        secure: true,
-        httpOnly: true,
-        sameSite: 'strict',
-        maxAge: 24 * 60 * 60 * 1000
-    }
-}))
+// app.use(session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: false,
+//     saveUninitialized: false,
+//     cookie: {
+//         secure: true,
+//         httpOnly: true,
+//         sameSite: 'strict',
+//         maxAge: 24 * 60 * 60 * 1000
+//     }
+// }))
 
 
 app.use(
